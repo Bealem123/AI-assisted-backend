@@ -5,7 +5,7 @@ const { OpenAI } = require("openai");
 const db = require("../../backend/db");
 
 const openai = new OpenAI({
-    apiKey: process.env.API_KEY, // your DeepSeek API key
+    apiKey: process.env.api_key, // your DeepSeek API key
     baseURL: "https://api.deepseek.com", // tell SDK to use DeepSeek instead of OpenAI
 });
 
