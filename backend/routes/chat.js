@@ -1,33 +1,17 @@
+// backend/routes/chat.js
+
 const express = require("express");
 const router = express.Router();
 require("dotenv").config();
 const { OpenAI } = require("openai");
 
-// DEBUG: Check if API key is being loaded
-console.log("🔐 DeepSeek API Key Present:", !!process.env.api_key);
-
+// Initialize DeepSeek API
 const openai = new OpenAI({
-  apiKey: process.env.api_key, // DeepSeek-compatible OpenAI SDK
-  baseURL: "https://api.deepseek.com", // DeepSeek base URL
+  apiKey: process.env.api_key, // DeepSeek API key from Render
+  baseURL: "https://api.deepseek.com", // Use DeepSeek API
 });
 
-// Test route: check if DeepSeek works
-router.get("/chat/test", async (req, res) => {
-  try {
-    const completion = await openai.chat.completions.create({
-      model: "deepseek-chat",
-      messages: [
-        { role: "user", content: "Say hello!" },
-      ],
-    });
-    res.json({ reply: completion.choices[0].message.content });
-  } catch (error) {
-    console.error("❌ DeepSeek test error:", error.message);
-    res.status(500).json({ error: error.message });
-  }
-});
-
-// Main AI chat route
+// POST /api/chat — Main AI chat endpoint
 router.post("/chat", async (req, res) => {
   const { message } = req.body;
 
@@ -35,15 +19,11 @@ router.post("/chat", async (req, res) => {
     return res.status(400).json({ error: "Message is required" });
   }
 
-  let systemMessage = `
-You are an AI assistant for a fingerprint-based attendance system.
-You help users with questions about attendance, registration, and usage of the system.
-You must never say you lack access.
-  `.trim();
-
-  // Skip DB integration if removed/commented
-
   try {
+    const systemMessage = `
+You are a helpful AI assistant in a fingerprint attendance system.
+Answer any relevant questions. Don't say you lack data.`;
+
     const completion = await openai.chat.completions.create({
       model: "deepseek-chat",
       messages: [
@@ -55,12 +35,18 @@ You must never say you lack access.
     const reply = completion.choices[0].message.content;
     res.json({ reply });
   } catch (error) {
-    console.error("❌ DeepSeek API error:", error.message);
+    console.error("🔥 DeepSeek API error:", error);
     res.status(500).json({ error: "AI service unavailable" });
   }
 });
 
+// Test route
+router.get("/chat/test", (req, res) => {
+  res.json({ reply: "Hello!" });
+});
+
 module.exports = router;
+
 
 // const express = require("express");
 // const router = express.Router();
