@@ -1,0 +1,104 @@
+/* Main container */
+.notifications {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.notifications h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #007acc;
+  text-align: center;
+}
+
+/* Notification list */
+.notificationList {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Notification item */
+.notificationItem {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #444;
+}
+
+/* Hover effect for notification item */
+.notificationItem:hover {
+  background-color: #f0f8ff;
+  border-color: #007acc;
+  cursor: pointer;
+}
+
+/* Error message */
+.error {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #f00;
+  background-color: #ffe6e6;
+  color: #f00;
+  text-align: center;
+}
+
+/* No notifications message */
+.noNotifications {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Responsive Design for smaller screen sizes */
+@media (max-width: 768px) {
+  .notifications {
+    padding: 15px;
+  }
+
+  .notifications h2 {
+    font-size: 1.6rem;
+  }
+
+  .notificationItem {
+    padding: 8px;
+  }
+
+  .notificationItem:hover {
+    background-color: #e8f0fe;
+  }
+
+  .noNotifications {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive Design for mobile screens */
+@media (max-width: 600px) {
+  .notifications {
+    padding: 10px;
+  }
+
+  .notifications h2 {
+    font-size: 1.4rem;
+  }
+
+  .notificationItem {
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+
+  .noNotifications {
+    font-size: 0.9rem;
+  }
+}

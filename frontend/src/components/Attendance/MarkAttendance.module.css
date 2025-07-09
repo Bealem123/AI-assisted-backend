@@ -1,0 +1,159 @@
+/* Styles for the MarkAttendance Component */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseButton {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes moveDisappear {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  25% {
+    transform: translateX(20px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(50px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.mark-attendance {
+  font-family: Arial, sans-serif;
+  background-color: #11320f;
+padding-top: 20px;
+
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(243, 241, 241, 0.93);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  
+  text-align: center;
+  height: 350px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.mark-attendance h1 {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+  position: relative;
+  animation: moveDisappear 4s infinite;
+}
+
+.mark-attendance h1::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 3px;
+  background-color: #46ae15;
+  margin: 10px auto 0;
+}
+
+.attendance-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: fadeIn 1.4s ease-in-out;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #fff;
+  animation: fadeIn 1.6s ease-in-out;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #201414;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #46ae15;
+  outline: none;
+  box-shadow: 0 0 8px rgba(131, 221, 71, 0.5);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  animation: fadeIn 1.8s ease-in-out;
+}
+
+.buttons button {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #220909;
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 50px;
+  animation: pulseButton 2s infinite ease-in-out;
+}
+
+.buttons button:hover {
+  background-color: #0cb636;
+  transform: scale(1.05);
+}
+
+.buttons button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  animation: none; /* Disable animations for disabled buttons */
+}
+
+.success {
+  margin-top: 50px;
+  color: #28a745;
+  font-weight: bold;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.error {
+  margin-top: 20px;
+  color: #dc3545;
+  font-weight: bold;
+  animation: fadeIn 2s ease-in-out;
+}

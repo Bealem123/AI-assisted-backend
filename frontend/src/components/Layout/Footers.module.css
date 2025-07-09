@@ -1,0 +1,22 @@
+.footer {
+  background-color: #0bd14d;
+  height: 70px;
+  color: #fff;
+  text-align: center;
+  padding: 15px 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-left: 0; /* Default when sidebar is closed */
+  transition: margin-left 0.3s ease; /* Smooth transition */
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+
+.sidebarOpen {
+  margin-left: 250px; /* Adjust to sidebar width */
+}
+
+.footerText {
+  font-size: 1rem;
+}

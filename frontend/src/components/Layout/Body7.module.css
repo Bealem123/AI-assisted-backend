@@ -1,0 +1,134 @@
+/* Body7 container - centers the content with smooth margin adjustments */
+.body7Container {
+  margin: 0 auto; /* Center horizontally */
+  transition: margin-left 0.3s ease; /* Smooth adjustment for margin */
+  padding: 20px;
+  display: flex;
+  flex-direction: row; /* Align content horizontally */
+  justify-content: space-between; /* Distribute sections evenly */
+  gap: 20px; /* Add spacing between the text and image */
+  width: 50%; /* Set the width of the container */
+  height: 200px; /* Adjust height dynamically */
+  margin-top: 300px;
+  margin-bottom: -100px;
+}
+
+/* Text content section */
+.body7Section {
+  background-color: white; /* Dark background */
+  padding: 1px;
+  height: 400px;
+  margin-top: -120px;
+  border-radius: 8px;
+  flex: 1; /* Equal width for the section */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: flex-start; /* Align text to the left */
+}
+
+/* Image container styling */
+.body7ImageContainer {
+  flex: 1; /* Equal width for the image section */
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+  background-color: white;
+}
+
+/* Image styling */
+.body7Image {
+  width: 100%; /* Full width of the image container */
+  max-width: 600px; /* Limit the maximum width of the image */
+  height: 400px; /* Maintain aspect ratio */
+  border-radius: 8px; /* Add rounded corners */
+  margin-bottom: 30px;
+}
+
+/* Section title style */
+.body7Title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333; /* Change color for better contrast */
+  font-weight: bold;
+  padding-top: 0px;
+}
+
+/* Section text style */
+.body7Text {
+  font-size: 20px; /* Paragraph font size */
+  color: #333333; /* Darker gray */
+  line-height: 1.6; /* Improve readability */
+  width: 100%; /* Adjust width to be responsive */
+  max-width: 500px; /* Set a maximum width */
+  font-family: inherit; /* Use the default font */
+  text-align: justify; /* Justify text to fill the width */
+  letter-spacing: normal; /* Let the font's natural spacing work */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .body7Container {
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+    gap: 20px; /* Add spacing for stacked layout */
+    width: 100%; /* Ensure full width for mobile */
+    height: auto; /* Adjust height for mobile */
+    margin-bottom: -100px;
+    margin-top: 100px;
+  }
+
+  .body7ImageContainer {
+    max-width: 100%; /* Allow the image to take full width */
+  }
+
+  .body7Image {
+    height: auto; /* Allow the image to scale responsively */
+    margin-bottom: 20px; /* Reduce space between image and text */
+  }
+
+  .body7Section {
+    margin-bottom: 20px; /* Add spacing between stacked sections */
+    padding: 10px; /* Optional padding to ensure content isn't too tight */
+    height: auto; /* Adjust height for mobile */
+  }
+
+  .body7Title {
+    font-size: 1.2rem; /* Adjust title font size for smaller screens */
+  }
+
+  .body7Text {
+    font-size: 18px; /* Adjust text font size for readability */
+    width: 100%; /* Full width for text */
+    max-width: none; /* Remove max-width constraint */
+  }
+}
+
+@media (max-width: 480px) {
+  .body7Container {
+    margin-top: 200px;
+    margin-bottom: -200px;
+    padding: 10px;
+  }
+
+  .body7Title {
+    font-size: 1rem; /* Further adjust title font size for small screens */
+    text-align: center; /* Center-align the title */
+    word-spacing: 0.3px; /* Adjust word spacing for consistency */
+  }
+
+  .body7Text {
+ padding-top: 50px;
+  font-size: 12px;
+    width: 100%;
+    min-width: 280px;  /* Increased min-width for better alignment */
+    max-width: 400px;
+    flex: 1;
+    padding: 0 15px;
+    color:black;
+    margin: 0 auto;
+    align-self: stretch;
+    letter-spacing: 0px;  /* Fine-tuned letter spacing */
+    word-spacing: 0px;  /* Ensures even distribution */
+    hyphens: auto;  /* Helps distribute words evenly */
+  }
+}

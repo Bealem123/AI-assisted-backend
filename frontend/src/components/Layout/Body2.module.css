@@ -1,0 +1,249 @@
+/* Body2 container - centers the content with smooth margin adjustments */
+.body2Container {
+  margin: 0 auto; /* Center horizontally with equal left and right margins */
+  width: 100%; /* Full width of the container */
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  margin-top: -600px;
+  transition: transform 0.3s ease; /* Smooth adjustments for responsiveness */
+}
+
+/* Body2 content area */
+.body2Content {
+  padding-top: 400px; /* Replace margin-top with padding for better spacing */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  gap: 20px; /* Space between the title text and categories */
+  width: 100%;
+}
+
+/* Text for the body */
+.body2Text {
+  font-size: 20px; /* Paragraph font size */
+  color: #333333; /* Darker gray */
+  line-height: 1.6; /* Improve readability */
+  width: 500px; /* Set a fixed width */
+  font-family: inherit; /* Use the default font */
+  text-align: justify; /* Justify text to fill the width */
+  letter-spacing: normal; /* Let the font's natural spacing work */
+}
+
+/* Categories container to display boxes in a row */
+.categories {
+  margin-top: 400px;
+  display: flex;
+  justify-content: space-between; /* Distribute categories evenly */
+  gap: 20px; /* Space between the category boxes */
+  height: 400px;
+  flex-wrap: wrap; /* Enable wrapping for smaller screens */
+}
+
+/* Category box style */
+.category {
+  background-color: rgb(4, 4, 23); /* Dark background color */
+  width: 50%;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1; /* Each category box will take up equal space */
+  display: flex;
+  flex-direction: column; /* Stack content vertically inside the box */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  min-width: 250px; /* Optional minimum width for each category */
+  margin-top: 20px; /* Adjust margin for better spacing */
+  position: relative;
+  overflow: hidden; /* Ensure animation stays within bounds */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling */
+}
+
+/* Hover effect for category */
+.category:hover {
+  transform: translateY(-5px) scale(1.05); /* Slide up slightly and enlarge */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Increase shadow to simulate depth */
+}
+
+/* Category title style */
+.categoryTitle {
+  font-size: 100px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* Category subtitle style */
+.categorySUBTitle h3 {
+  color: white;
+}
+
+/* Category description style */
+.categoryDescription {
+  
+  font-size: 20px;
+  color: white;
+  text-align: center; /* Center-align text */
+  text-align: justify;
+  padding-left: 40px;
+  padding-right: 60px;
+  margin-bottom: 20px;
+}
+
+/* Category button style */
+.categoryBtn {
+  padding: 10px 20px;
+  background-color: #6de887; /* Similar to Amazon's button color */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.categoryBtn:hover {
+  background-color: #051307; /* Darker shade of button color on hover */
+}
+
+/* Responsive Design for screens up to 1024px */
+@media (max-width: 1024px) {
+  .body2Container {
+    padding: 10px; /* Reduce padding */
+  }
+
+  .body2Text {
+    width: 100%; /* Allow text section to take up full width */
+    font-size: 18px; /* Reduce font size for smaller screens */
+  }
+
+  .categories {
+    flex-direction: column; /* Stack categories vertically */
+    gap: 15px; /* Reduce gap */
+  }
+
+  .category {
+    width: 100%; /* Ensure category boxes take full width on smaller screens */
+    min-width: unset; /* Remove minimum width */
+  }
+
+  .categoryTitle {
+    font-size: 60px; /* Reduce title font size */
+  }
+}
+
+/* Responsive Design for mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .body2Container {
+    padding: 10px; /* Reduce padding */
+  }
+
+  .body2Content {
+    padding-top: 250px; /* Adjust top padding for smaller screens */
+  }
+
+  .body2Text {
+    width: 100%; /* Allow text section to take up full width */
+    font-size: 16px; /* Reduce font size */
+  }
+
+  .categories {
+    flex-direction: column; /* Stack categories vertically */
+    gap: 10px; /* Reduce space between categories */
+  }
+
+  .category {
+    width: 100%; /* Full width for categories on mobile */
+    padding: 15px; /* Less padding on smaller screens */
+    min-width: unset; /* Remove minimum width */
+  }
+
+  .categoryTitle {
+    font-size: 40px; /* Further reduce title font size */
+  }
+
+  .categoryDescription {
+    font-size: 16px; /* Smaller description text */
+  }
+
+  .categoryBtn {
+    padding: 8px 15px; /* Smaller button size */
+  }
+}
+
+/* Fully optimized for very small mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .body2Container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: -400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    align-items: center;
+  }
+
+  
+  .categoryDescription {
+   padding-top: 50px;
+  font-size: 12px;
+    width: 100%;
+    min-width: 280px;  /* Increased min-width for better alignment */
+    max-width: 400px;
+    flex: 1;
+    padding: 0 15px;
+    color:white;
+    margin: 0 auto;
+    align-self: stretch;
+    letter-spacing: 0px;  /* Fine-tuned letter spacing */
+    word-spacing: 0px;  /* Ensures even distribution */
+    hyphens: auto;  /* Helps distribute words evenly */
+  }
+
+  .categories {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;  /* Ensure equal width */
+    padding: 10px;
+  }
+
+  .category h1 {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
+  }
+
+  .categoryTitle {
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    padding-top: 30px;
+  }
+
+
+  .categoryTitle {
+    margin-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  .categoryBtn {
+    padding: 8px 12px;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+
+

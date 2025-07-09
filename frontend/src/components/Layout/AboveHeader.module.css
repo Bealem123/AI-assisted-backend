@@ -1,0 +1,113 @@
+.aboveHeader {
+  background-color: #f8f9fa; /* Light grey background */
+  color: #343a40; /* Dark text color */
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 14px;
+  border-bottom: 1px solid #dee2e6; /* Light grey border */
+  position: relative; /* Fixed position */
+  position: sticky;
+  top: 0; /* Stick to the top */
+  width: 100%; /* Ensure it spans the full width */
+  z-index: 1000; /* Ensures it stays above other content */
+}
+
+.announcement {
+  margin-bottom: 5px;
+}
+
+.announcement p {
+  margin-left: -1000px;
+}
+
+.contactInfo {
+  font-weight: bold;
+  margin-right: -1000px;
+}
+
+.contactInfo p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  gap: 20px;
+}
+
+.icon {
+  margin-right: 5px; /* Space between icon and text */
+}
+
+.socialIcons {
+  display: flex;
+  margin-left: 200px;
+  margin-top: -11px;
+  margin-bottom: 15px;
+}
+
+.socialIcons .icon {
+  margin: 0 10px; /* Space between social icons */
+  cursor: pointer;
+}
+
+.socialIcons .icon:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .announcement p,
+  .contactInfo {
+    margin: 0;
+  }
+
+  .announcement p {
+    text-align: center;
+  }
+
+  .contactInfo p {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .socialIcons {
+    margin-left: 0;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboveHeader {
+    font-size: 12px;
+    margin-bottom: 2px;
+     border-bottom: 1px solid #dee2e6; /* Light grey border */
+     font-weight: bold;
+  }
+
+  .announcement p,
+  .contactInfo p {
+    font-size: 12px;
+  }
+
+
+ .contactInfo p{
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+ }
+
+
+  .socialIcons {
+    flex-direction: row;
+   
+    align-items: left;
+    gap: 10px;
+    margin-left: 380px;
+    margin-top: -20px;
+    margin-right: 10px;
+  }
+
+  .socialIcons .icon {
+    margin: 5px 0;
+  }
+}

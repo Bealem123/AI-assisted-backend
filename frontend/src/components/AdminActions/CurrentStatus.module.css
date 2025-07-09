@@ -1,0 +1,89 @@
+/* Container for current status */
+.currentStatus {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color: #100f0f;
+}
+
+.currentStatus h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #007acc;
+  text-align: center;
+}
+
+.currentStatus p {
+         color: black;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+/* Error message styling */
+.error {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ff0000;
+  border-radius: 10px;
+  background-color: #ffe6e6;
+  color: #ff0000;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.error p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Responsive Design for smaller screen sizes */
+@media (max-width: 768px) {
+  .currentStatus {
+    padding: 15px;
+  }
+
+  .currentStatus h2 {
+    font-size: 1.25rem;
+  }
+
+  .currentStatus p {
+    font-size: 0.95rem;
+  }
+
+  .error {
+    padding: 12px;
+  }
+
+  .error p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .currentStatus {
+    padding: 10px;
+  }
+
+  .currentStatus h2 {
+    font-size: 1.1rem;
+  }
+
+  .currentStatus p {
+    font-size: 0.9rem;
+  }
+
+  .error {
+    padding: 10px;
+  }
+
+  .error p {
+    font-size: 0.9rem;
+  }
+}

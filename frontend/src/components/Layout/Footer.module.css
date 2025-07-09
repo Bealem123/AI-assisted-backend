@@ -1,0 +1,374 @@
+.footerContainer {
+  margin-top: 350px;
+  background-color: black;
+  color: white;
+  padding-bottom: 10px;
+  height: auto; /* Change height to auto to accommodate content */
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.footerCredits article {
+  border-bottom: solid 1px;
+  padding-bottom: 30px;
+  text-align: justify;
+  width: 30%;
+  margin-left: 1000px;
+  margin-right: auto;
+  margin-top: -290px;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.footerNewsletter {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.footerSocial {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* Center align the social icons */
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.footerSocial a {
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footerSocial a:hover {
+  color: #ff9800;
+  transform: scale(1.1);
+}
+
+.footerLinks {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column; /* Stack vertically on small screens */
+  align-items: center; /* Center align the content */
+  gap: 50px; /* Adjust the gap between link sections */
+  animation: fadeIn 2s ease-in-out;
+}
+
+.footerLinks h4 {
+  font-size: 22px;
+  margin-top: -50px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.linkSection ul {
+  padding-top: 50px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.linkSection ul li {
+  list-style: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.linkSection ul li a {
+  color: white;
+  transition: color 0.3s;
+}
+
+.linkSection ul li a:hover {
+  color: #ff9800;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .footerContainer {
+    height: 400px;
+  }
+
+  .footerCredits article {
+    margin-left: 1150px;
+  }
+
+  .footerNewsletter {
+    margin-left: 1300px;
+  }
+
+  .footerSocial {
+    margin-left: 1300px;
+  }
+
+  .footerLinks {
+    flex-direction: row;
+    align-items: flex-start; /* Align to the top */
+    gap: 100px;
+    margin-left: 300px;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .footerCredits article {
+    width: 50%;
+  }
+
+  .footerLinks {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 50px;
+  }
+}
+
+/* Small screens */
+@media (max-width: 767px) {
+  .footerContainer {
+    padding: 20px;
+  }
+
+  .footerCredits article {
+    width: 100%;
+    margin-top: 0;
+    text-align: center; /* Center align text on small screens */
+  }
+
+  .footerNewsletter {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footerSocial {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .footerLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .linkSection ul {
+    padding-top: 10px;
+  }
+}
+
+/* Extra Small screens */
+@media (max-width: 480px) {
+  .footerContainer {
+    width: 100%;
+    padding: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-bottom: 40px;
+  }
+
+  .footerCredits article {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: justify;
+    width: 100%;
+    padding-bottom: 20px;
+    margin-top: 0px;
+    max-width: 100%;
+    padding-top: 20px;
+  font-size: 12px;
+    width: 100%;
+    min-width: 280px;  /* Increased min-width for better alignment */
+    max-width: 400px;
+    flex: 1;
+    padding-left: 15px;
+    padding-right: 15px;
+    color:white;
+    
+    align-self: stretch;
+    letter-spacing: 0px;  /* Fine-tuned letter spacing */
+    word-spacing: 0px;  /* Ensures even distribution */
+    hyphens: auto;  /* Helps distribute words evenly */
+  }
+
+  .footerCredits p {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+    padding-bottom: 10px;
+    margin: 0;
+    width: 100%;
+    hyphens: auto;
+    font-size: 12px;
+  }
+
+  .footerNewsletter {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 12px;
+  }
+
+  .footerSocial {
+    text-align: center;
+    margin-top: 2px;
+  }
+
+  .footerLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-left: -100px;
+    text-decoration: none;
+    font-size: 12px;
+    padding-top: 10px;
+  }
+
+  .footerLinks h4 {
+    margin-left: 0px;
+    padding-top: 2px;
+    list-style: none;
+    font-size: 12px;
+  }
+
+  .linkSection {
+    padding: 20px 20px;
+  }
+
+  .linkSection h4 {
+    margin-left: 135px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    list-style: none;
+    font-size: 16px;
+  }
+
+  .linkSection ul {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 170px;
+    list-style: none;
+  }
+
+  /* Apply text-decoration none to the anchor tags */
+  .footerLink {
+    text-decoration: none; /* Removes the underline */
+  }
+
+  .footerLink ul li {
+    list-style: none;
+  }
+}
+.footerCredits h2{
+padding-left: 20px;
+padding-right: 10px;
+}
+
+
+.footerCredits{
+  padding-top: -100px;
+}
+
+
+/* .footerContainer{
+  margin-top: 350px;
+  background-color: black;
+  color: white;
+  padding-bottom:10px;
+  height: 400px;
+  
+}
+
+.footerCredits article {
+  border-bottom: solid 1px;
+  padding-bottom: 30px;
+  text-align: justify;
+  width: 30%;
+  margin-left: 1300px;
+  margin-top: -290px;
+}
+
+.footerNewsletter{
+margin-left: 1300px;
+padding-bottom: 10px;
+}
+
+.footerSocial{
+   margin-left: 1300px;
+}
+
+.footerSocial a{
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+
+.footerSocial .socialIcon a{
+  color: white;
+  font-size: 24px; 
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+
+.footerLinks{
+  
+  margin-left: 300px;
+  padding-top: 150px;
+  display: flex;
+  gap: 100px;
+}
+
+
+ .footerLinks h4 {
+font-size: 22px;
+margin-top: -50px;
+
+
+} 
+
+.linkSection ul{
+  padding-top: 50px;
+}
+
+.linkSection ul li {
+  list-style: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+.linkSection ul li a{
+color: white;
+} */

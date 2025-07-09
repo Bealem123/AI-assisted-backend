@@ -1,0 +1,206 @@
+.banner {
+  
+  
+  gap: 100px; /* Space between categories */
+  padding: 20px;
+  margin-top: 0px;
+  animation: fadeInSlide 1s ease-in-out; /* Animation for the entire banner */
+ 
+   width: 100%;
+   height: 300px;
+   margin-bottom: -700px;
+   
+  
+}
+
+ .bannerImage {
+width: 100%;
+margin-left: 0px;
+margin-right: 0px;
+object-fit: cover;
+
+height: 400px;
+} 
+
+
+/* Animation for side movement */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px); /* Start from the left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* End at original position */
+  }
+}
+
+.category {
+  flex: 1; /* Equal width for both categories */
+  animation: slideUp 1.2s ease-in-out; /* Individual category animation */
+}
+
+/* Individual category animation */
+
+  
+
+
+
+
+
+
+
+.bannerTitle {
+  font-size: 36px;
+  margin-bottom: 0px;
+  margin-top: 45px;
+}
+
+.bannerText {
+  font-size: 18px;
+}
+
+.bannerBtn {
+  background-color: #e6f2e6;
+  color: black;
+  display: block;
+  margin-top: 100px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: popUp 0.8s ease-in-out; /* Button pop-up effect */
+}
+
+/* Pop-up effect for the button */
+@keyframes popUp {
+  0% {
+    transform: scale(0.9); /* Start smaller */
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1); /* End at normal size */
+    opacity: 1;
+  }
+}
+
+.bannerBtn:hover {
+  background-color: #3b12ce;
+}
+
+.textCategory {
+  padding: 20px;
+}
+
+.textTitle {
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.textContent {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .banner {
+    height: 250px; /* Adjust banner height */
+    padding: 10px; /* Reduce padding */
+    gap: 50px; /* Reduce gap between categories */
+  }
+
+  .bannerImage {
+    height: 300px; /* Adjust image height */
+  }
+
+  .bannerTitle {
+    font-size: 28px; /* Reduce font size for smaller screens */
+    margin-top: 20px; /* Adjust top margin */
+  }
+
+  .bannerText {
+    font-size: 16px; /* Reduce font size */
+  }
+
+  .bannerBtn {
+    margin-top: 50px; /* Adjust button margin */
+    padding: 8px 16px; /* Adjust button padding */
+  }
+
+  .textTitle {
+    font-size: 28px; /* Adjust title font size */
+  }
+
+  .textContent {
+    font-size: 18px; /* Adjust text font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: 200px; /* Further reduce banner height */
+    padding: 5px; /* Reduce padding */
+    gap: 30px; /* Reduce gap between categories */
+  }
+
+  .bannerImage {
+    height: 250px; /* Further adjust image height */
+  }
+
+  .bannerTitle {
+    font-size: 24px; /* Further reduce font size */
+    margin-top: 10px; /* Reduce top margin */
+  }
+
+  .bannerText {
+    font-size: 14px; /* Further reduce font size */
+  }
+
+  .bannerBtn {
+    margin-top: 30px; /* Reduce button margin */
+    padding: 6px 12px; /* Further adjust button padding */
+  }
+
+  .textTitle {
+    font-size: 24px; /* Further adjust title font size */
+  }
+
+  .textContent {
+    font-size: 16px; /* Further adjust text font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 150px; /* Reduce banner height for small screens */
+    padding: 0; /* Remove padding */
+    gap: 10px; /* Minimize gap */
+  }
+
+  .bannerImage {
+    height: 200px; /* Reduce image height */
+  }
+
+  .bannerTitle {
+    font-size: 20px; /* Adjust font size */
+    margin-top: 5px; /* Adjust top margin */
+  }
+
+  .bannerText {
+    font-size: 12px; /* Adjust font size */
+  }
+
+  .bannerBtn {
+    margin-top: 20px; /* Reduce button margin */
+    padding: 5px 10px; /* Adjust button padding */
+  }
+
+  .textTitle {
+    font-size: 20px; /* Adjust title font size */
+  }
+
+  .textContent {
+    font-size: 14px; /* Adjust text font size */
+  }
+}

@@ -1,0 +1,198 @@
+/* Container for the Body3 Component */
+.body3Container {
+  display: flex; /* Side-by-side layout */
+  flex-direction: row; /* Horizontal arrangement */
+  justify-content: space-between; /* Space between the text and image */
+  align-items: flex-start; /* Align items at the top */
+  gap: 100px; /* Space between the text and image */
+  padding: 20px; /* Padding around the container */
+  background-color: #ffffff; /* Background color */
+  margin-top: 30px; /* Adjust top margin */
+  margin-bottom: -200px; /* Adjust bottom margin */
+  margin-left: 400px;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Text Section */
+.body3Section {
+  flex: 1; /* Take up 50% of the container */
+  padding: 20px; /* Inner padding */
+  background-color: #f9f9f9; /* Light gray background */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.body3Title {
+  font-size: 60px; /* Title font size */
+  font-weight: bold;
+  color: #101010; /* Dark gray */
+  margin-bottom: 10px;
+}
+
+.body3Text {
+  font-size: 20px; /* Paragraph font size */
+  color: #333333; /* Darker gray */
+  line-height: 1.6; /* Improve readability */
+  width: 500px; /* Set a fixed width */
+  font-family: inherit; /* Use the default font */
+  text-align: justify; /* Justify text to fill the width */
+  letter-spacing: normal; /* Let the font's natural spacing work */
+}
+
+/* Image Section */
+.body3Image {
+  flex: 1; /* Take up 50% of the container */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  background-color: #ffffff; /* White background */
+  padding: 10px; /* Inner padding */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.body3Image img {
+  max-width: 200%; /* Ensure the image fits the container */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 60px;
+}
+
+/* Responsive Design for Tablets and Smaller Devices */
+@media (max-width: 1024px) {
+  .body3Container {
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Add space between stacked sections */
+  }
+
+  .body3Section,
+  .body3Image {
+    width: 100%; /* Make sections full width */
+    margin: 0 auto; /* Center content */
+    padding: 20px; /* Add padding around */
+  }
+
+  .body3Text {
+    width: 100%; /* Allow text section to use full width */
+    font-size: 18px; /* Adjust font size */
+    padding-top: 50px;
+  }
+
+  .body3Title {
+    font-size: 40px; /* Adjust title font size for smaller screens */
+    padding-top: 10px;
+    padding-bottom: 100px;
+  }
+}
+
+/* Responsive Design for Mobile (480px and Below) */
+@media (max-width: 480px) {
+  .body3Container {
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px; /* Reduce gap */
+    width: 100%; /* Full width */
+    margin-left: 0;
+    margin-right: 0;
+    padding: 15px; /* Padding around the container */
+    margin-top: 0px;
+  }
+
+  .body3Section,
+  .body3Image {
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Center sections */
+  }
+
+  .body3Title {
+    font-size: 24px; /* Adjust title font size */
+    text-align: center; /* Center-align the title */
+    padding-bottom: 0px;
+  }
+
+  .body3Text {
+     padding-top: 50px;
+  font-size: 12px;
+    width: 100%;
+    min-width: 280px;  /* Increased min-width for better alignment */
+    max-width: 400px;
+    flex: 1;
+    padding: 0 15px;
+    color:black;
+    margin: 0 auto;
+    align-self: stretch;
+    letter-spacing: 0px;  /* Fine-tuned letter spacing */
+    word-spacing: 0px;  /* Ensures even distribution */
+    hyphens: auto;  /* Helps distribute words evenly */
+  }
+
+  .body3Image img {
+    max-width: 80%; /* Adjust image size */
+    height: auto;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center the image */
+  }
+}
+
+/* Container for the Body3 Component */
+@media (min-width: 1024px) {
+  .body3Container {
+    display: flex; /* Side-by-side layout */
+    flex-direction: row; /* Horizontal arrangement */
+    justify-content: space-between; /* Space between the text and image */
+    align-items: center; /* Align items at the top */
+    gap: 10px; /* Space between the text and image */
+    padding: 20px; /* Padding around the container */
+    background-color: #ffffff; /* Background color */
+    margin-top: 30px; /* Adjust top margin */
+    margin-bottom: -200px; /* Adjust bottom margin */
+    
+    
+    width: 100%;
+  }
+
+  /* Text Section */
+  .body3Section {
+    /* Take up 50% of the container */
+    padding: 20px; /* Inner padding */
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 8px; /* Rounded corners */
+    width: 100%;
+    margin-left: -150px;
+  }
+
+  .body3Title {
+    font-size: 60px; /* Title font size */
+    font-weight: bold;
+    color: #101010; /* Dark gray */
+    margin-bottom: 10px;
+  }
+
+  .body3Text {
+    font-size: 20px; /* Paragraph font size */
+    color: #333333; /* Darker gray */
+    line-height: 1.6; /* Improve readability */
+    width: 500px; /* Set a fixed width */
+    font-family: inherit; /* Use the default font */
+    text-align: justify; /* Justify text to fill the width */
+    letter-spacing: normal; /* Let the font's natural spacing work */
+  }
+
+  /* Image Section */
+  .body3Image {
+    
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    background-color: #ffffff; /* White background */
+    padding: 10px; /* Inner padding */
+    border-radius: 8px; /* Rounded corners */
+    margin-right: auto;
+  }
+
+  .body3Image img {
+    
+  margin-right: auto;
+    margin-top: 60px;
+  }
+}

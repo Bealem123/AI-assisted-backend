@@ -1,0 +1,52 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.checkUser {
+  padding: 20px;
+  text-align: center;
+  background-color: black;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+.header {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 10px; /* Add spacing below header */
+  position: relative; /* Enable positioning for pseudo-element */
+}
+
+.header::after {
+  content: "";
+  display: block;
+  width: 50%; /* Border width */
+  height: 2px; /* Border thickness */
+  background-color: rgb(74, 245, 85); /* Border color */
+  margin: 8px auto 0; /* Center below header with spacing */
+  animation: fadeIn 1.2s ease-in-out; /* Fade-in animation for the border */
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  animation: fadeIn 0.8s ease-in-out; /* Error message animation */
+}
+
+p {
+  font-size: 1rem;
+  color: white;
+  animation: fadeIn 1.4s ease-in-out; /* Paragraph animation */
+}

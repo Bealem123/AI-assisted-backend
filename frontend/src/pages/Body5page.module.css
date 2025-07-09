@@ -1,0 +1,61 @@
+/* Container for Body2 page */
+.body2PageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: white;
+  margin-bottom: 20px; /* Adjusted to match with bottom margin */
+  margin-top: 20px; /* Adjusted top margin */
+  min-height: calc(100vh - 140px); /* Ensure it takes up full space minus header and footer */
+  flex-grow: 1;
+  justify-content: space-between; /* Distribute space correctly */
+}
+
+/* Title styling for the page */
+.body2PageTitle {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold; /* Ensure title is bold */
+}
+
+/* Content styling under the title */
+.body2PageContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  flex-wrap: wrap; /* Ensures that sections wrap on smaller screens */
+  width: 100%; /* Full width for content */
+  max-width: 1200px; /* Ensure maximum width */
+}
+
+/* Add space between Body2 sections */
+.body2PageText {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 20px;
+  max-width: 900px; /* Control text width */
+  margin-left: auto;
+  margin-right: auto; /* Center-align text */
+  line-height: 1.5;
+}
+
+/* Optional: Adjustments for responsiveness */
+@media (max-width: 768px) {
+  .body2PageContent {
+    flex-direction: column; /* Stack the content vertically on smaller screens */
+    gap: 20px; /* Add spacing between items */
+  }
+
+  .body2PageText {
+    font-size: 0.9rem; /* Adjust text size for smaller screens */
+    margin-top: 15px;
+  }
+
+  .body2PageTitle {
+    font-size: 2rem; /* Reduce title size on smaller screens */
+  }
+}

@@ -1,0 +1,126 @@
+/* Main container */
+.history-logs {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.history-logs h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #007acc;
+  text-align: center;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1rem;
+}
+
+/* Table caption */
+caption {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #555;
+  text-align: left;
+}
+
+/* Table headers */
+thead th {
+  background-color: #007acc;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Table data */
+tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f4f8fb;
+}
+
+tbody tr:hover {
+  background-color: #eef6fc;
+}
+
+/* Error message */
+.error {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #f00;
+  border-radius: 4px;
+  background-color: #ffe6e6;
+  color: #f00;
+  text-align: center;
+}
+
+/* Paragraph style */
+p {
+  text-align: center;
+  color: #666;
+}
+
+/* Responsive Design for smaller screen sizes */
+@media (max-width: 768px) {
+  .history-logs {
+    padding: 15px;
+  }
+
+  .history-logs h2 {
+    font-size: 1.6rem;
+  }
+
+  table {
+    font-size: 0.95rem;
+  }
+
+  thead th, tbody td {
+    padding: 8px;
+  }
+
+  caption {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive Design for mobile screens */
+@media (max-width: 600px) {
+  .history-logs {
+    padding: 10px;
+  }
+
+  .history-logs h2 {
+    font-size: 1.4rem;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+
+  thead th, tbody td {
+    padding: 6px;
+  }
+
+  caption {
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}

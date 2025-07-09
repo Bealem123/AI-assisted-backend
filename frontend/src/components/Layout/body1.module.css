@@ -1,0 +1,195 @@
+/* Default Layout for Larger Screens */
+.body1Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 100px; /* Space between text and image */
+  padding: 20px;
+  background-color: #ffffff;
+  margin-top: 800px;
+  margin-bottom: -200px;
+  margin-left: 400px;
+  margin-right: auto;
+  width: 50%;
+}
+
+.body1Section {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.body1Title {
+  font-size: 60px;
+  font-weight: bold;
+  color: #101010;
+  margin-bottom: 10px;
+}
+
+.body1Text {
+  font-size: 20px;
+  color: #333333;
+  line-height: 1.6;
+  width: 500px;
+  font-family: inherit;
+  text-align: justify;
+  letter-spacing: normal;
+}
+
+.body1Image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.body1Image img {
+  max-width: 200%;
+  height: auto;
+  margin-top: 100px;
+}
+
+/* Responsive Design for Tablets and Smaller Devices */
+@media (max-width: 1024px) {
+  .body1Container {
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Add space between stacked sections */
+  }
+
+  .body1Section, .body1Image {
+    width: 100%; /* Make sections full width */
+  }
+}
+
+/* Responsive Design for Mobile (480px and Below) */
+@media (max-width: 480px) {
+  .body1Container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    align-items: center;
+  }
+
+  .body1Section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .body1Text {
+    font-size: 12px;
+    width: 100%;
+    min-width: 280px;  /* Increased min-width for better alignment */
+    max-width: 400px;
+    flex: 1;
+    padding: 0 15px;
+    color:black;
+    margin: 0 auto;
+    align-self: stretch;
+    letter-spacing: 0px;  /* Fine-tuned letter spacing */
+    word-spacing: 0px;  /* Ensures even distribution */
+    hyphens: auto;  /* Helps distribute words evenly */
+  }
+
+
+
+
+  .body1Text p {
+
+    width: 100%;
+    margin: 0 0 10px 0;
+    text-align: justify;
+    line-height: 1.4;  /* Slightly adjusted line height */
+     text-align: justify;
+    text-justify: distribute-all-lines; /* More aggressive justification */
+    word-wrap: break-word;
+    word-break: normal;
+  }
+
+  .body1Image img {
+    max-width: 80%;
+    height: auto;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Default Layout for Larger Screens (Desktop and above) */
+@media (min-width: 1024px) {
+  .body1Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px; /* Space between text and image */
+    padding: 20px;
+    background-color: #ffffff;
+    margin-top: 900px;
+    margin-bottom: -200px;
+    margin-left: 200px;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .body1Section {
+    margin-left: 150px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+
+  .body1Title {
+    font-size: 60px;
+    font-weight: bold;
+    color: #101010;
+    margin-bottom: 10px;
+  }
+
+  .body1Text {
+    font-size: 20px;
+    color: #333333;
+    line-height: 1.6;
+    width: 500px;
+    font-family: inherit;
+    text-align: justify;
+    letter-spacing: normal;
+  }
+
+  .body1Image {
+    margin-right: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .body1Image img {
+    width: 80%;
+    max-width: 500%;
+    height: auto;
+    margin-top: 50px;
+    margin-left: 500px;
+  }
+}

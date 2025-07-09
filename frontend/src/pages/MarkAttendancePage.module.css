@@ -1,0 +1,20 @@
+/* MarkAttendancePage.module.css */
+
+.mark-attendance-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5; /* Light gray background for the page */
+  padding: 20px;
+}
+
+.mark-attendance-page > div {
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 20px;
+}
+

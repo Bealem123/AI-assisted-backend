@@ -1,0 +1,117 @@
+/* Sidebar layout when open or closed */
+.sidebarLayout {
+  position: fixed;
+  margin-top: 135px;
+  top: 0;
+  left: -250px; /* Initially hide the sidebar off-screen */
+  width: 250px;
+  height: 100%;
+  background-color: black;
+  color: black;
+  transition: transform 0.3s ease-in-out; /* Smooth slide effect */
+  padding-top: 20px;
+  z-index: 999; /* Ensures the sidebar stays on top */
+  transform: translateX(0); /* Ensure transform exists for transitions */
+  overflow-y: auto;
+}
+
+/* Sidebar when open */
+.sidebarLayout.open {
+  left: 0; /* Ensure the sidebar is fully visible */
+  transform: translateX(0); /* Fully slide into view */
+}
+
+/* Menu items styling */
+.sidebarMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebarMenu li {
+  padding: 10px;
+}
+
+.menuLink {
+  color: rgb(218, 218, 218);
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.menuLink:hover {
+  background-color: #555;
+}
+
+/* Toggle button styling */
+.toggleButton {
+  background: none;
+  border: none;
+  color: #1a0f0f;
+  position: fixed;
+  top: 40px;
+  left: 20px; /* Make sure it's not pushed off the screen */
+  z-index: 1000;
+  cursor: pointer;
+  font-size: 24px;
+  padding-top: 0px;
+}
+
+/* Optional: Add a transition effect for the button */
+.toggleButton:focus {
+  outline: none;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .sidebarLayout {
+    width: 200px; /* Smaller width for tablets */
+  }
+
+  .menuLink {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .toggleButton {
+    top: 10px;
+    left: 10px; /* Adjust button position */
+    font-size: 20px; /* Slightly smaller button size */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sidebarLayout {
+    width: 180px; /* Even smaller width for mobile devices */
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .menuLink {
+    font-size: 14px; /* Smaller font size for mobile */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 50px;
+    overflow-y: auto;
+  }
+
+  .sidebarMenu li {
+    margin-top: 100px;
+    margin-bottom: -140px;
+    margin-left: 5px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+
+  .sidebarMenu p {
+    color: rgb(223, 205, 205);
+  }
+
+  /* Adjust toggle button for mobile screens */
+  .toggleButton {
+    font-size: 18px;
+    left: 270px; /* Ensure button is visible */
+    top: 50px; /* Adjust the top position if necessary */
+  }
+}

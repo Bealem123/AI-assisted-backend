@@ -1,0 +1,44 @@
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+.header {
+  font-size: 2rem;
+  color: #333;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #090c09;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover{
+ background-color: rgb(18, 176, 18);
+
+}
+
+.button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}

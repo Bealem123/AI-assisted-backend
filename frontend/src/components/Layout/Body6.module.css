@@ -1,0 +1,209 @@
+/* Body1 container - centers the content with smooth margin adjustments */
+.body1Container {
+  margin: 0 auto; /* Center horizontally with equal left and right margins */
+  width: 100%; /* Full width of the container */
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  margin-top: -270px;
+  margin-bottom: -100px;
+  transition: transform 0.3s ease; /* Smooth adjustments for responsiveness */
+}
+
+/* Body1 content area */
+.body1Content {
+  padding-top: 400px; /* Replace margin-top with padding for better spacing */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  gap: 20px; /* Space between the title text and categories */
+  width: 100%;
+}
+
+/* Text for the body */
+.body1Text {
+  font-weight: bold;
+  font-family: Impact, sans-serif;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Categories container to display boxes in a row */
+.categories {
+  display: flex;
+  justify-content: space-between; /* Distribute categories evenly */
+  gap: 20px; /* Space between the category boxes */
+  height: 400px;
+  flex-wrap: wrap; /* Enable wrapping for smaller screens */
+}
+
+/* Category box style */
+.category {
+  background-color: rgb(4, 4, 23); /* Dark background color */
+  width: 50%;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1; /* Each category box will take up equal space */
+  display: flex;
+  flex-direction: column; /* Stack content vertically inside the box */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  min-width: 250px; /* Optional minimum width for each category */
+  margin-top: 20px; /* Adjust margin for better spacing */
+  position: relative;
+  overflow: hidden; /* Ensure animation stays within bounds */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling */
+}
+
+/* Hover effect for category */
+.category:hover {
+  transform: translateY(-5px) scale(1.05); /* Slide up slightly and enlarge */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Increase shadow to simulate depth */
+}
+
+/* Category title style */
+.categoryTitle {
+  font-size: 100px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* Category subtitle style */
+.categorySUBTitle h3 {
+  color: white;
+}
+
+/* Category description style */
+.categoryDescription {
+  font-size: 20px;
+  color: white;
+  text-align: center; /* Center-align text */
+  text-align: justify;
+  padding-left: 40px;
+  padding-right: 70px;
+  margin-bottom: 20px;
+}
+
+/* Category button style */
+.categoryBtn {
+  padding: 10px 20px;
+  background-color: #6de887; /* Similar to Amazon's button color */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.categoryBtn:hover {
+  background-color: #051307; /* Darker shade of button color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .categories {
+    flex-direction: column; /* Stack categories vertically on smaller screens */
+    gap: 20px; /* Space between stacked categories */
+  }
+
+  .category {
+    width: 100%; /* Ensure categories take full width on smaller screens */
+    min-width: unset; /* Remove minimum width */
+  }
+
+  .body1Content {
+    padding-top: 200px; /* Adjust padding for smaller screens */
+  }
+  
+  .body1Container {
+    margin-top: -100px;
+    margin-bottom: -50px;
+  }
+  
+  .categoryTitle {
+    font-size: 50px; /* Adjust font size for smaller screens */
+  }
+  
+  .categoryDescription {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .body1Container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: -400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    align-items: center;
+  }
+
+
+ .categories {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;  /* Ensure equal width */
+    padding: 10px;
+  }
+
+.category h1 {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
+  }
+
+  .categoryTitle {
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    
+  }
+
+
+
+  .body1Content {
+    padding-top: 150px;
+  }
+
+  .categoryTitle {
+    font-size: 22px; /* Adjusted font size for small screens */
+    text-align: center;
+    word-spacing: 0.3px; /* Adjust word spacing for consistency */
+  }
+
+  .categoryDescription {
+     padding-top: 50px;
+  font-size: 12px;
+    width: 100%;
+    min-width: 280px;  /* Increased min-width for better alignment */
+    max-width: 400px;
+    flex: 1;
+    padding: 0 15px;
+    color:white;
+    margin: 0 auto;
+    align-self: stretch;
+    letter-spacing: 0px;  /* Fine-tuned letter spacing */
+    word-spacing: 0px;  /* Ensures even distribution */
+    hyphens: auto;  /* Helps distribute words evenly */
+  }
+}
+
+

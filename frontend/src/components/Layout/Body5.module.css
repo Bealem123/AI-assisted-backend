@@ -1,0 +1,114 @@
+/* Container for image and text */
+.body2Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 20px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 200px;
+  width: 100%;
+  max-width: 1200px; /* Limit the total container width */
+  margin-left: auto; /* Center container */
+  margin-right: auto; /* Center container */
+}
+
+/* Box for the Image */
+.imageBox {
+  flex: 1; /* Allow the image box to take equal space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  max-width: 500px; /* Limit the maximum width for the image */
+}
+
+.bodyImage {
+  max-width: 100%; /* Ensure the image fits within the container */
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Box for the Text */
+.textBox {
+  flex: 2; /* Give the text box more space relative to the image */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%; /* Let the text box expand naturally */
+  max-width: 600px; /* Set a wider max width for better readability */
+  padding: 20px;
+  color: black;
+}
+
+/* Individual text category */
+.category {
+  padding: 10px;
+  background-color: #fff;
+}
+
+.categoryTitle {
+  font-size: 24px; /* Adjust title font size */
+  font-weight: bold;
+  color: #101010;
+  margin-bottom: 10px;
+}
+
+.categoryText {
+  font-size: 20px; /* Paragraph font size */
+  color: #333333; /* Darker gray */
+  line-height: 1.6; /* Improve readability */
+  font-family: inherit; /* Use the default font */
+  text-align: justify; /* Justify text to fill the width */
+  letter-spacing: normal; /* Let the font's natural spacing work */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .body2Container {
+    flex-direction: column; /* Stack image and text vertically on smaller screens */
+    gap: 20px;
+  }
+
+  .imageBox, .textBox {
+    flex: unset;
+    width: 100%; /* Full width on smaller screens */
+    max-width: unset; /* Remove max width constraints */
+    margin-left: unset; /* Remove left margin */
+    margin-right: unset; /* Remove right margin */
+  }
+
+  .categoryText {
+    width: 100%; /* Make sure text takes full width */
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .categoryText {
+     padding-top: 50px;
+  font-size: 12px;
+    width: 100%;
+    min-width: 280px;  /* Increased min-width for better alignment */
+    max-width: 400px;
+    flex: 1;
+    padding: 0 15px;
+    color:black;
+    margin: 0 auto;
+    align-self: stretch;
+    letter-spacing: 0px;  /* Fine-tuned letter spacing */
+    word-spacing: 0px;  /* Ensures even distribution */
+    hyphens: auto;  /* Helps distribute words evenly */
+  }
+
+  .categoryTitle{
+    padding-bottom: 80px;
+  }
+
+
+
+
+}

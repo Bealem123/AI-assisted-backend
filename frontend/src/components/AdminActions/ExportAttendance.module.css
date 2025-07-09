@@ -1,0 +1,92 @@
+/* Main container */
+.export-attendance {
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+/* Export button */
+.export-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.export-button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.export-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Loading message */
+.loading-message {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #007bff;
+}
+
+/* Success and error messages */
+.success-message {
+  margin-top: 10px;
+  color: #28a745;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.error-message {
+  margin-top: 10px;
+  color: #d9534f;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Responsive Design for smaller screen sizes */
+@media (max-width: 768px) {
+  .export-attendance {
+    padding: 15px;
+  }
+
+  .export-button {
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+
+  .loading-message, .success-message, .error-message {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .export-attendance {
+    padding: 10px;
+  }
+
+ .export-attendance h2{
+  color: rgb(21, 173, 224);
+ }
+
+  .export-button {
+    padding: 14px;
+    font-size: 1.2rem;
+  }
+
+  .loading-message, .success-message, .error-message {
+    font-size: 1rem;
+  }
+}
