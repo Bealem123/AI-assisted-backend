@@ -5,7 +5,7 @@ const baseURL =
   process.env.REACT_APP_API_URL || // Use the .env variable if provided
   (process.env.NODE_ENV === "development"
     ? "http://localhost:5000/api" // Default local API URL for development
-    : "https://ai-assisted-backend-3.onrender.com"); // Default production API URL
+    : "https://ai-assisted-backend-9.onrender.com/api"); // Default production API URL
     
 
 // Create an Axios instance
