@@ -3,45 +3,65 @@ const router = express.Router();
 require("dotenv").config();
 const { OpenAI } = require("openai");
 
-// No DB required here
-// const db = require("../../backend/db"); ❌ Remove this
+// DEBUG: Check if API key is being loaded
+console.log("🔐 DeepSeek API Key Present:", !!process.env.api_key);
 
 const openai = new OpenAI({
-    apiKey: process.env.api_key,
-    baseURL: "https://api.deepseek.com", // Use DeepSeek-compatible OpenAI SDK
+  apiKey: process.env.api_key, // DeepSeek-compatible OpenAI SDK
+  baseURL: "https://api.deepseek.com", // DeepSeek base URL
 });
 
+// Test route: check if DeepSeek works
+router.get("/chat/test", async (req, res) => {
+  try {
+    const completion = await openai.chat.completions.create({
+      model: "deepseek-chat",
+      messages: [
+        { role: "user", content: "Say hello!" },
+      ],
+    });
+    res.json({ reply: completion.choices[0].message.content });
+  } catch (error) {
+    console.error("❌ DeepSeek test error:", error.message);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Main AI chat route
 router.post("/chat", async (req, res) => {
-    const { message } = req.body;
+  const { message } = req.body;
 
-    if (!message) {
-        return res.status(400).json({ error: "Message is required" });
-    }
+  if (!message) {
+    return res.status(400).json({ error: "Message is required" });
+  }
 
-    // Static system message (no DB data)
-    const systemMessage = `
+  let systemMessage = `
 You are an AI assistant for a fingerprint-based attendance system.
-Answer user questions helpfully.
-    `.trim();
+You help users with questions about attendance, registration, and usage of the system.
+You must never say you lack access.
+  `.trim();
 
-    try {
-        const completion = await openai.chat.completions.create({
-            model: "deepseek-chat",
-            messages: [
-                { role: "system", content: systemMessage },
-                { role: "user", content: message },
-            ],
-        });
+  // Skip DB integration if removed/commented
 
-        const reply = completion.choices[0].message.content;
-        res.json({ reply });
-    } catch (error) {
-        console.error("DeepSeek API error:", error.message);
-        res.status(500).json({ error: "AI service unavailable" });
-    }
+  try {
+    const completion = await openai.chat.completions.create({
+      model: "deepseek-chat",
+      messages: [
+        { role: "system", content: systemMessage },
+        { role: "user", content: message },
+      ],
+    });
+
+    const reply = completion.choices[0].message.content;
+    res.json({ reply });
+  } catch (error) {
+    console.error("❌ DeepSeek API error:", error.message);
+    res.status(500).json({ error: "AI service unavailable" });
+  }
 });
 
 module.exports = router;
+
 // const express = require("express");
 // const router = express.Router();
 // require("dotenv").config();
